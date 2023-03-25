@@ -43,7 +43,7 @@ static std::map<Effect, int32_t> vibEffects = {
 static std::map<EffectStrength, int32_t> vibStrengths = {
     { EffectStrength::LIGHT, 4},
     { EffectStrength::MEDIUM, 6},
-    { EffectStrength::STRONG, 10}
+    { EffectStrength::STRONG, 9}
 };
 #endif
 
