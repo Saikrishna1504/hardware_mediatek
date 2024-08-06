@@ -9,8 +9,14 @@ soong_namespace {
 
 cc_defaults {
     name: "libmtkperf_client_defaults",
-    srcs: ["client.c"],
+    srcs: ["mtkperf_client.c"],
     shared_libs: ["liblog"],
+}
+
+cc_defaults {
+    name: "libpowerhalwrap_defaults",
+    srcs: ["powerhalwrap_vendor.c"],
+    shared_libs: ["liblog"]
 }
 
 cc_library_shared {
@@ -22,4 +28,15 @@ cc_library_shared {
 cc_library_shared {
     name: "libmtkperf_client",
     defaults: ["libmtkperf_client_defaults"],
+}
+
+cc_library_shared {
+    name: "libpowerhalwrap",
+    defaults: ["libpowerhalwrap_defaults"],
+}
+
+cc_library_shared {
+    name: "libpowerhalwrap_vendor",
+    vendor: true,
+    defaults: ["libpowerhalwrap_defaults"],
 }
