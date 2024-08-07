@@ -1,5 +1,6 @@
 on init
-    chown system system /sys/kernel/thunderquake_engine/level
+    chown system system /sys/class/leds/vibrator/vmax
+    chown system system /sys/class/leds/vibrator/vmax_max
 
 service vendor.vibrator-mediatek /vendor/bin/hw/android.hardware.vibrator-service.mediatek
     class hal
