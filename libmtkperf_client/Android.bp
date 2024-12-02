@@ -40,3 +40,10 @@ cc_library_shared {
     defaults: ["libpowerhalwrap_defaults"],
     vendor: true,
 }
+
+cc_library_shared {
+    name: "libperfctl_vendor",
+    vendor: true,
+    srcs: ["perfctl_vendor.c"],
+    shared_libs: ["liblog"],
+}
