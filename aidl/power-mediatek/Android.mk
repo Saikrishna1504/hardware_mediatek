@@ -5,7 +5,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.power-service-mediatek
 LOCAL_VENDOR_MODULE := true
 LOCAL_MULTILIB := 64
-#LOCAL_VINTF_FRAGMENTS := power-mtk.xml
+LOCAL_VINTF_FRAGMENTS := power-mtk.xml
 LOCAL_SRC_FILES := Power.cpp
 
 LOCAL_SHARED_LIBRARIES := \
