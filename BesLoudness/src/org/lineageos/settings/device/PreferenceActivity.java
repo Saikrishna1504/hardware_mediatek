@@ -28,7 +28,7 @@ public class PreferenceActivity extends CollapsingToolbarBaseActivity {
     }
 
     public static class SoundPreferenceFragment extends PreferenceFragment
-        implements OnCheckedChangeListener {
+            implements OnCheckedChangeListener {
 
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -36,7 +36,9 @@ public class PreferenceActivity extends CollapsingToolbarBaseActivity {
             MainSwitchPreference toggle = (MainSwitchPreference)
                     findPreference(BesLoudnessManager.KEY_BESLOUDNESS);
             assert toggle != null;
-            toggle.updateStatus(BesLoudnessManager.get(getContext()));
+
+            toggle.setChecked(BesLoudnessManager.get(getContext()));
+
             toggle.addOnSwitchChangeListener(this);
         }
 
