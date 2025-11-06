@@ -1,0 +1,40 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+soong_namespace {
+}
+
+cc_library {
+    name: "libwifi-hal-mediatek",
+    vendor: true,
+    cflags: [
+        "-Wno-unused-parameter",
+        "-Wno-int-to-pointer-cast",
+        "-Wno-maybe-uninitialized",
+        "-Wno-parentheses",
+        "-Wno-conversion-null",
+    ],
+    header_libs: [
+        "libnetlink_iface_headers",
+        "wifi_legacy_headers",
+    ],
+    srcs: [
+        "wifi_hal.cpp",
+        "common.cpp",
+        "cpp_bindings.cpp",
+        "wifi_logger.cpp",
+        "wifi_offload.cpp",
+        "nan.cpp",
+        "nan_ind.cpp",
+        "nan_req.cpp",
+        "nan_rsp.cpp",
+        "wifi_rtt.cpp",
+    ],
+    shared_libs: [
+        "libutils",
+        "liblog",
+        "libnl",
+    ],
+}
