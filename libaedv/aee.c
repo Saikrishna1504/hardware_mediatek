@@ -22,6 +22,11 @@ int aee_system_warning(const char *lib, const char *path, unsigned int options, 
     return 0;
 }
 
+int aee_modem_warning(const char *lib,const char* path,unsigned int options, const char *log_msg,  const char *ver) {
+    ALOGD("[%s]: lib: %s, path: %s, options: %u, log_msg: %s, ver: %s", __func__, lib, path, options, log_msg, ver);
+    return 0;
+}
+
 int aee_log_msg(const char *lib, const char *path, unsigned int options, const char *log_msg, const char *ver) {
     ALOGD("[%s]: lib: %s, path: %s, options: %u, log_msg: %s, ver: %s", __func__, lib, path, options, log_msg, ver);
     return 0;
