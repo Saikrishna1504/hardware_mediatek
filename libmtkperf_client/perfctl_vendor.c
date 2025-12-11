@@ -9,12 +9,12 @@
 #include <log/log.h>
 
 uint64_t earaNotifyCVJobBegin(uint64_t jobId, uint64_t jobPriority, uint64_t* result) {
-    ALOGD("[%s]: jobId: %llu, jobPriority: %llu, result: %p", __func__, jobId, jobPriority, result);
+    ALOGD("[%s]: jobId: %lu, jobPriority: %lu, result: %p", __func__, jobId, jobPriority, result);
     return 0;
 }
 
 uint64_t earaNotifyCVJobEnd(uint64_t jobId, uint64_t timestamp, uint32_t* status) {
-    ALOGD("[%s]: jobId: %llu, timestamp: %llu, status: %p", __func__, jobId, timestamp, status);
+    ALOGD("[%s]: jobId: %lu, timestamp: %lu, status: %p", __func__, jobId, timestamp, status);
     return 0;
 }
 
@@ -23,15 +23,15 @@ void earaGetUsage(uint32_t param1, uint32_t* usage, uint32_t* status) {
 }
 
 void earaNotifyJobBegin(uint32_t jobId, uint64_t jobData, int64_t* param3, int64_t* param4) {
-    ALOGD("[%s]: jobId: %u, jobData: %llu, param3: %p, param4: %p", __func__, jobId, jobData,
+    ALOGD("[%s]: jobId: %u, jobData: %lu, param3: %p, param4: %p", __func__, jobId, jobData,
           param3, param4);
 }
 
 uint64_t earaNotifyJobEnd(uint32_t jobId, uint64_t timestamp, uint32_t* status, uint32_t flags,
                           int64_t* inputData, int64_t* outputData, uint64_t context,
                           int64_t* result) {
-    ALOGD("[%s]: jobId: %u, timestamp: %llu, status: %p, flags: %u, inputData: "
-          "%p, outputData: %p, context: %llu, result: %p",
+    ALOGD("[%s]: jobId: %u, timestamp: %lu, status: %p, flags: %u, inputData: "
+          "%p, outputData: %p, context: %lu, result: %p",
           __func__, jobId, timestamp, status, flags, inputData, outputData, context, result);
     return 0;
 }
@@ -53,7 +53,7 @@ void xgfGetFPS(int32_t* currentFPS, int32_t* averageFPS) {
 }
 
 void xgfGetFstbActive(uint64_t status) {
-    ALOGD("[%s]: status: %llu", __func__, status);
+    ALOGD("[%s]: status: %lu", __func__, status);
 }
 
 void xgfWaitFstbActive(void) {
